@@ -1,3 +1,3 @@
 # Описание
 Основная страница - new.htm.
-(pages/Document.pdf)
+![](pages/Document.pdf)
