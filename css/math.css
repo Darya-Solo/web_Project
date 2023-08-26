@@ -1,0 +1,50 @@
+
+.page_main-block {
+    height: 700px;
+    background-image: url("../картинки/math_logo.jpeg");
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .white {
+        height: 600px;
+    }
+
+}
+
+@media (max-width: 970px) {
+    .white {
+        height: 660px;
+    }
+
+    .page_main-block {
+        height: 760px;
+    }
+}
+
+@media (max-width: 945px) {
+    .white {
+        height: 750px;
+    }
+
+    .page_main-block {
+        height: 850px;
+    }
+}
+
+@media (max-width: 750px) {
+    .white {
+        height: 800px;
+    }
+
+    .page_main-block {
+        height: 900px;
+    }
+}@media (max-width: 650px) {
+    .white {
+        height: 900px;
+    }
+
+    .page_main-block {
+        height: 1000px;
+    }
+}
