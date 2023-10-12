@@ -1,9 +1,4 @@
 
-.page_main-block {
-    height: 700px;
-    background-image: url("../картинки/math_logo.jpeg");
-    background-size: cover;
-}
 @media (max-width: 1200px) {
     .white {
         height: 600px;

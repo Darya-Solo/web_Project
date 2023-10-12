@@ -3,7 +3,6 @@
 body {
     color: #212121;
     font-family: Poppins;
-    font-weight: regular;
     font-size: 18px;
     width: 100%;
     line-height: 200%;
@@ -27,6 +26,157 @@ body {
 main {
     margin-bottom: 225px;
 }
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+iframe {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 70%;
+    height: 550px;
+}
+
+.decor{
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto 0;
+    background: #ff7500;
+    border-radius: 30px;
+}
+
+@media (max-width: 700px) {
+    .decor{
+        max-width: 400px;
+    }
+}
+.form-left-decoration, .form-right-decoration {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+}
+.form-left-decoration {
+    bottom: 60px;
+    left: -30px;
+}
+.form-right-decoration {
+    top: 60px;
+    right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 30px;
+    background: #ff7500;
+}
+.form-left-decoration:before {
+    top: -20px;
+}
+.form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+}
+.form-right-decoration:before {
+    top: -20px;
+    right: 0;
+}
+.form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+}
+.circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff7500;
+}
+.form-inner {
+    padding: 50px;
+}
+
+.form-inner input, .form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+    margin-top: 30px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+}
+.form-inner textarea {
+    resize: none;
+}
+.form-inner h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #707981;
+}
+
+@media (max-width: 1219px) {
+    iframe {
+        margin-bottom: 50px;
+        width: 70%;
+        height: 550px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+    iframe {
+        margin-bottom: 50px;
+        width: 70%;
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    iframe {
+        margin-bottom: 50px;
+        width: 70%;
+        height: 350px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+    iframe {
+        margin-bottom: 50px;
+        width: 70%;
+        height: 300px;
+    }
+
+}
+
+
 
 /*------Header---------*/
 .header {
@@ -136,7 +286,6 @@ main {
 .main-block_button {
     width: 150px;
     height: 50px;
-    font-weight: medium;
     display: flex;
     align-self: flex-start;
     align-items: center;
@@ -149,6 +298,7 @@ main {
     width: 45%;
     flex: 1 1 auto;
     border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
 }
 
 @media (max-width: 1219px) {
@@ -210,6 +360,7 @@ main {
 
     .main-block_image {
         border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
 
     }
 }
@@ -814,6 +965,7 @@ main {
 
 .site-footer a {
     color: #ffffff;
+    font-family: 'Onest', sans-serif;
     text-decoration: none;
 }
 
@@ -868,3 +1020,5 @@ main {
     }
 
 }
+
+

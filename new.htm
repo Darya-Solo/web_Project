@@ -3,14 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Кнопка, используемая для открытия контактной формы-фиксируется в нижней части страницы */
+        .open-button {
+            background-color: #555;
+            width: 60px;
+            height: 60px;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+            position: fixed;
+            bottom: 23px;
+            background: #ff7500;
+            right: 28px;
+            border-radius: 30px;
+        }
 
+        /* Всплывающая форма-скрыта по умолчанию */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Добавление стилей в контейнер форм */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Поля ввода полной ширины */
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* Когда входы получают фокус, сделайте что-нибудь */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Установите стиль для кнопки отправить/кнопка */
+        .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+
+        /* Добавьте красный цвет фона к кнопке отмена */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Добавьте некоторые эффекты наведения на кнопки */
+        .form-container .btn:hover, .open-button:hover {
+            opacity: 1;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/Styles.css">
     <title>Document</title>
 </head>
 <body>
+<button class="open-button" onclick="openForm()" style="z-index:100;position: fixed; bottom: 20px; right: 20px">
+    <img src="картинки/tele.png" alt="" style="height: 40px;width: 40px;position: relative;bottom: 10px; right: 10px">
+</button>
+<div class="form-popup" id="myForm" style="z-index: 1000">
+    <form action="db.php" class="form-container">
+        <h1>Мы вам перезвоним</h1>
+
+        <label for="email"><b>Имя</b></label>
+        <input type="text" placeholder="Ваше имя" name="email" required>
+
+        <label for="psw"><b>Телефон</b></label>
+        <input type="password" placeholder="Ваш телефон" name="psw" required>
+
+        <button type="submit" class="btn">Отправить</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+    </form>
+</div>
+
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
 <div class="wrap">
     <header class="header">
         <div class="header_container _container">
@@ -72,6 +170,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="iframe">
+            <iframe src="https://www.youtube.com/embed/59QGCdN5_Co?si=X_0XbCdwXpGB9eRt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="page_block-inf _block-inf1">
             <img src="картинки/image.png" alt="" class="block-inf_image">
@@ -309,7 +410,6 @@
                         <div class="partner_block_inf" id="C1">
                             <img src="картинки/1C.png" class="partner_img">
                         </div>
-
                         <div class="partner_block_inf" id="VTB">
                             <img src="картинки/VTB.png" class="partner_img">
                         </div>
@@ -324,6 +424,19 @@
             </div>
         </div>
     </main>
+    <form class="decor" style="margin-top: -150px;margin-bottom: 50px">
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+            <h3 style="color: white">Напишите нам, если у вас остались вопросы</h3>
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Сообщение..." rows="3"></textarea>
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+
     <!-- Site footer -->
     <footer class="site-footer">
         <div class="container">
@@ -334,7 +447,7 @@
                         <li><a href="https://pk.mipt.ru/">Сайт Приёмной комиссии МФТИ</a></li>
                         <li><a href="https://clck.ru/33vGFj">Учебные планы 2023 года набора ФПМИ</a></li>
                         <li><a href="https://clck.ru/32Xihz">Правила приема 2023</a></li>
-                        <li><a href="https://t.me/fpmi_abitu_news">Telegram-чат Абитуриенты ФПМИ</a></li>
+                        <li><a href="https://t.me/fpmi_abitu_news"><span lang="es">Telegram</span>-чат Абитуриенты ФПМИ</a></li>
                         <li><a href="https://vk.com/abitu">Группа Абитуриенты ФПМИ Вконтакте</a></li>
                         <li><a href="https://vk.com/miptfpmi">Официальная группа ФПМИ Вконтакте</a></li>
                     </ul>

@@ -1,172 +1,4 @@
-/*------HEADER--------*/
 
-.logo_icon_img {
-    width: 40px;
-}
-
-.logo_text {
-    font-size: 36px;
-    color: #ff7500;
-}
-
-.header_logo {
-    margin-top: 100px;
-    margin-left: -50px;
-    z-index: 100;
-}
-
-.main-block_image {
-    position: absolute;
-    width: 100%;
-    z-index: -199;
-    border-radius: 0;
-    opacity: 70%;
-}
-
-.main-block_text {
-    color: black;
-}
-
-.white {
-    z-index: 90;
-    position: absolute;
-    width: 70%;
-    height: 600px;
-    background: white;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-    margin-top: 50px;
-    opacity: 80%;
-
-}
-
-.main-block_description {
-    width: 80%;
-}
-
-.description_container {
-    margin-top: 100px;
-}
-
-.page_main-block {
-    height: 700px;
-    background-image: url("../картинки/logo_img1.jpeg");
-    background-size: cover;
-}
-
-.main-block_title {
-    z-index: 1000;
-}
-
-.main-block_text {
-    z-index: 100;
-}
-
-.block_inf_program {
-    height: 50px;
-}
-
-.page_block-inf {
-    margin-top: 70px;
-}
-
-.block_inf_arrow:hover {
-    width: 30px;
-}
-
-@media (max-width: 1131px) {
-    .page_main-block {
-        height: 800px;
-    }
-
-    .white {
-        height: 700px;
-        width: 80%;
-    }
-
-    .header_logo {
-        margin-left: 50px;
-    }
-}
-
-@media (max-width: 1400px) {
-    .main-block_title {
-        font-size: 56px;
-    }
-}
-
-@media (max-width: 960px) {
-    .white {
-        height: 860px;
-    }
-
-    .page_main-block {
-        height: 960px;
-    }
-}
-
-@media (max-width: 850px) {
-    .white {
-        height: 750px;
-    }
-
-    .page_main-block {
-        height: 850px;
-    }
-
-    .description_container {
-        width: 90%;
-    }
-
-
-}
-
-@media (max-width: 770px) {
-    .white {
-        height: 800px;
-    }
-
-
-    .page_main-block {
-        height: 900px;
-    }
-
-    .description_container {
-        width: 90%;
-    }
-
-
-}
-
-@media (max-width: 670px) {
-    .white {
-        width: 100%;
-        border-radius: 0;
-
-    }
-
-    .description_container {
-        width: 98%;
-        padding-left: 30px;
-    }
-}
-
-@media (max-width: 650px) {
-    .white {
-        width: 100%;
-        height: 900px;
-
-    }
-
-    .description_container {
-        width: 98%;
-        padding-left: 30px;
-    }
-
-    .page_main-block {
-        height: 1000px;
-    }
-}
 
 /*-------Main--------*/
 
@@ -181,6 +13,10 @@
 
 .block_inf_arrow {
     background: #2b2386;
+}
+
+.page_main-block{
+    margin-bottom: 50px;
 }
 
 
@@ -277,4 +113,8 @@
         margin-right: 10px;
         margin-left: 10px;
     }
+}
+
+.main-block_title{
+    font-size: 55px;
 }
